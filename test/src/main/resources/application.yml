@@ -2,12 +2,11 @@ spring:
   output:
     ansi:
       enabled: always
-
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/bootdb?serverTimezone=UTC&useSSL=false
-    username: root
-    password: root
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/bootdb?serverTimezone=UTC&useSSL=false
+#    username: root
+#    password: 1234
 
 server:
   port: 8081
@@ -15,9 +14,3 @@ server:
     encoding:
       force-response: true
 
-logging:
-  level:
-    org:
-      apache:
-        coyote:
-          http11: debug
