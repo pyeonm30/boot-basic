@@ -2,6 +2,7 @@ package kr.boot.basic.config;
 
 
 import kr.boot.basic.repository.JdbcMemberRepository;
+import kr.boot.basic.repository.JdbcTemplateMemberRepository;
 import kr.boot.basic.repository.MemberRepository;
 import kr.boot.basic.repository.MemoryMemberRepository;
 import kr.boot.basic.service.MemberService;
@@ -25,7 +26,8 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
         //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
 }
