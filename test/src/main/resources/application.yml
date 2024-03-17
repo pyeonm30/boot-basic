@@ -8,6 +8,18 @@ spring:
     username: root
     password: 1234
 
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    # JDBC TimeZone Setting
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Seoul
+
 server:
   port: 8081
   servlet:
